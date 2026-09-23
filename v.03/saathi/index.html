@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saathi</title>
+<meta name="theme-color" content="#16587B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Saathi">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="stage">
+  <aside class="notes">
+    <h1>Saathi</h1>
+    <p>A clickable prototype of a student wellbeing app, shaped by 41 responses to the ING student wellbeing survey. For now, all data stays in this browser.</p>
+    <ul>
+      <li><strong>Anonymous by default</strong><span>Fear of judgment (17) and privacy (11) were top reasons students avoid help.</span></li>
+      <li><strong>Daily check-in and two-week screening, from the Today screen</strong><span>37% scored moderate or severe on the PHQ-4 items; 16 weren't sure their problem was "serious enough".</span></li>
+      <li><strong>Reminders that ring</strong><span>Check-in, meditation, study and bedtime reminders, as phone notifications.</span></li>
+      <li><strong>Tools for coping alone</strong><span>19 prefer to handle things themselves; concentration trouble affected 53%.</span></li>
+      <li><strong>Body tab</strong><span>Tiredness (51%), sleep (38%) and appetite (33%) problems, plus the printable emergency card from EduCare. Its QR works offline.</span></li>
+      <li><strong>Support tab</strong><span>14 didn't know where to go and 17 said help costs too much, so free lines come first.</span></li>
+    </ul>
+  </aside>
+  <div class="phone" id="phone">
+    <header class="top">
+      <button class="brand" data-action="goto" data-tab="today" aria-label="Go to Today"><i></i><span id="brandname">Saathi</span></button>
+      <button class="sos" data-action="sos">SOS</button>
+    </header>
+    <main class="main" id="main" tabindex="-1"></main>
+    <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+    <div id="layer"></div>
+    <div id="pop"></div>
+  </div>
+</div>
+<div id="print-area" aria-hidden="true"></div>
+
+<!-- App scripts: order matters, app.js must be last -->
+<script src="js/vendor/qrcode.js"></script>
+<script src="js/state.js"></script>
+<script src="js/data.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/color.js"></script>
+<script src="js/reminders.js"></script>
+<script src="js/medcard.js"></script>
+<script src="js/overlays.js"></script>
+<script src="js/screens/today.js"></script>
+<script src="js/screens/checkin.js"></script>
+<script src="js/screens/tools.js"></script>
+<script src="js/screens/body.js"></script>
+<script src="js/screens/support.js"></script>
+<script src="js/screens/settings.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
